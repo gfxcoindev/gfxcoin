@@ -2538,7 +2538,7 @@ bool LoadBlockIndex(bool fAllowNew)
         //    CTxOut(empty)
         //  vMerkleTree: 12630d16a9
 
-        const char* pszTimestamp = "Government divided as Brexiteers fear Theresa May is backing plan to tie firms up in Brussels regulation - The Telegraph 21-04-2018";
+        const char* pszTimestamp = "Audaces Fortuna Juvat 21-04-2018";
         CTransaction txNew;
         txNew.nTime = 1524370298;
         txNew.vin.resize(1);
