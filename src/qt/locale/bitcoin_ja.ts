@@ -2674,8 +2674,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+6"/>
-        <source>Listen for connections on &lt;port&gt; (default: 4096 or testnet: 3052)</source>
-        <translation>&lt;port&gt; で 接続をリスン (デフォルト: 4096かtestnet は 3052)</translation>
+        <source>Listen for connections on &lt;port&gt; (default: 24895 or testnet: 34895)</source>
+        <translation>&lt;port&gt; で 接続をリスン (デフォルト: 24895かtestnet は 34895)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2734,8 +2734,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="-87"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 4093 or testnet: 3050)</source>
-        <translation>&lt;port&gt; で JSON-RPC 接続をリスン (デフォルト: 4093かtestnet は 3050)</translation>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 24896 or testnet: 34896)</source>
+        <translation>&lt;port&gt; で JSON-RPC 接続をリスン (デフォルト: 24896かtestnet は 34896)</translation>
     </message>
     <message>
         <location line="-11"/>

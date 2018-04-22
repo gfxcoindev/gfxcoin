@@ -2676,8 +2676,8 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Listen for connections on &lt;port&gt; (default: 4096 or testnet: 3052)</source>
-        <translation>Lyssna efter anslutningar på &lt;port&gt; (standard: 4096 eller testnät: 3052)</translation>
+        <source>Listen for connections on &lt;port&gt; (default: 24895 or testnet: 34895)</source>
+        <translation>Lyssna efter anslutningar på &lt;port&gt; (standard: 24895 eller testnät: 34895)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2736,8 +2736,8 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     </message>
     <message>
         <location line="-87"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 4093 or testnet: 3050)</source>
-        <translation>Lyssna efter JSON-RPC anslutningar på &lt;port&gt; (standard: 4093 eller testnät: 3050)</translation>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 24896 or testnet: 34896)</source>
+        <translation>Lyssna efter JSON-RPC anslutningar på &lt;port&gt; (standard: 24896 eller testnät: 34896)</translation>
     </message>
     <message>
         <location line="-11"/>

@@ -2673,8 +2673,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="+6"/>
-        <source>Listen for connections on &lt;port&gt; (default: 4096 or testnet: 3052)</source>
-        <translation>Sprejmi povezave na &lt;port&gt; (privzeta vrata: 4096 ali testnet: 3052) </translation>
+        <source>Listen for connections on &lt;port&gt; (default: 24895 or testnet: 34895)</source>
+        <translation>Sprejmi povezave na &lt;port&gt; (privzeta vrata: 24895 ali testnet: 34895) </translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2733,8 +2733,8 @@ Ta oznaka se obarva rdeče, če je prioriteta manjša kot &quot;srednja&quot;.
     </message>
     <message>
         <location line="-87"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 4093 or testnet: 3050)</source>
-        <translation>Sprejmi povezave na &lt;port&gt; (privzeta vrata: 4096 ali testnet: 3052) </translation>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 24896 or testnet: 34896)</source>
+        <translation>Sprejmi povezave na &lt;port&gt; (privzeta vrata: 24895 ali testnet: 34895) </translation>
     </message>
     <message>
         <location line="-11"/>

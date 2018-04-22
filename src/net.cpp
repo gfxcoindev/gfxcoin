@@ -1228,25 +1228,25 @@ void MapPort()
 // Each pair gives a source name and a seed name.
 // The first name is used as information source for addrman.
 // The second name should resolve to a list of seed addresses.
-static const char *str3052[][2] = {
+static const char *strDNSSeed[][2] = {
 };
 
 void ThreadDNSAddressSeed(void* parg)
 {
     // Make this thread recognisable as the DNS seeding thread
-    RenameThread("graphicscoin-3052");
+    RenameThread("graphicscoin-dnsseed");
 
     try
     {
-        vnThreadsRunning[THREAD_3052]++;
+        vnThreadsRunning[THREAD_DNSSEED]++;
         ThreadDNSAddressSeed2(parg);
-        vnThreadsRunning[THREAD_3052]--;
+        vnThreadsRunning[THREAD_DNSSEED]--;
     }
     catch (std::exception& e) {
-        vnThreadsRunning[THREAD_3052]--;
+        vnThreadsRunning[THREAD_DNSSEED]--;
         PrintException(&e, "ThreadDNSAddressSeed()");
     } catch (...) {
-        vnThreadsRunning[THREAD_3052]--;
+        vnThreadsRunning[THREAD_DNSSEED]--;
         throw; // support pthread_cancel()
     }
     printf("ThreadDNSAddressSeed exited\n");
@@ -1261,13 +1261,13 @@ void ThreadDNSAddressSeed2(void* parg)
     {
         printf("Loading addresses from DNS seeds (could take a while)\n");
 
-        for (unsigned int seed_idx = 0; seed_idx < ARRAYLEN(str3052); seed_idx++) {
+        for (unsigned int seed_idx = 0; seed_idx < ARRAYLEN(strDNSSeed); seed_idx++) {
             if (HaveNameProxy()) {
-                AddOneShot(str3052[seed_idx][1]);
+                AddOneShot(strDNSSeed[seed_idx][1]);
             } else {
                 vector<CNetAddr> vaddr;
                 vector<CAddress> vAdd;
-                if (LookupHost(str3052[seed_idx][1], vaddr))
+                if (LookupHost(strDNSSeed[seed_idx][1], vaddr))
                 {
                     BOOST_FOREACH(CNetAddr& ip, vaddr)
                     {
@@ -1278,7 +1278,7 @@ void ThreadDNSAddressSeed2(void* parg)
                         found++;
                     }
                 }
-                addrman.Add(vAdd, CNetAddr(str3052[seed_idx][0], true));
+                addrman.Add(vAdd, CNetAddr(strDNSSeed[seed_idx][0], true));
             }
         }
     }
@@ -1919,7 +1919,7 @@ void StartNode(void* parg)
     // Start threads
     //
 
-    if (!GetBoolArg("-3052", true))
+    if (!GetBoolArg("-dnsseed", true))
         printf("DNS seeding disabled\n");
     else
         if (!NewThread(ThreadDNSAddressSeed, NULL))
@@ -1989,7 +1989,7 @@ bool StopNode()
 #ifdef USE_UPNP
     if (vnThreadsRunning[THREAD_UPNP] > 0) printf("ThreadMapPort still running\n");
 #endif
-    if (vnThreadsRunning[THREAD_3052] > 0) printf("ThreadDNSAddressSeed still running\n");
+    if (vnThreadsRunning[THREAD_DNSSEED] > 0) printf("ThreadDNSAddressSeed still running\n");
     if (vnThreadsRunning[THREAD_ADDEDCONNECTIONS] > 0) printf("ThreadOpenAddedConnections still running\n");
     if (vnThreadsRunning[THREAD_DUMPADDRESS] > 0) printf("ThreadDumpAddresses still running\n");
     if (vnThreadsRunning[THREAD_STAKE_MINER] > 0) printf("ThreadStakeMiner still running\n");
