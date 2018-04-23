@@ -2674,8 +2674,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Listen for connections on &lt;port&gt; (default: 24895 or testnet: 34895)</source>
-        <translation>Počúvať pripojenia na &lt;port&gt; (predvolené: 24895 alebo testovacia sieť: 34895)</translation>
+        <source>Listen for connections on &lt;port&gt; (default: 4096 or testnet: 3052)</source>
+        <translation>Počúvať pripojenia na &lt;port&gt; (predvolené: 4096 alebo testovacia sieť: 3052)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2734,8 +2734,8 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="-87"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 24896 or testnet: 34896)</source>
-        <translation>Počúvajte pre JSON-RPC spojenie na &lt;port&gt; (predvolené: 24896 alebo testovaciasieť: 34896)</translation>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 4093 or testnet: 3050)</source>
+        <translation>Počúvajte pre JSON-RPC spojenie na &lt;port&gt; (predvolené: 4093 alebo testovaciasieť: 3050)</translation>
     </message>
     <message>
         <location line="-11"/>
